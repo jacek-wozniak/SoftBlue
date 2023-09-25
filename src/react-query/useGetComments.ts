@@ -4,16 +4,20 @@ import { API } from './API'
 import {queryClient} from "./queryClient";
 
 const getComments = async ({queryKey}: QueryFunctionContext<any>) => {
+    // to zapytanie jest oczywiście nadmiarowe, natomiast API nie zwraca informacji ile jest wszystkich komentarzy - normalnie bym raczej
+    // wyciągnął i zwrócił wszystkie komentarze i zrobił paginację po stronie Reacta, ale w zadaniu było określone, że paginacja ma działać z wykorzystaniem API
+    const { data: fullData } = await axios.get(API.GET.comments);
+
     const { data } = await axios.get(API.GET.comments, {
         params: {
             limit: queryKey[1],
             page: queryKey[0],
-            sortBy: 'createdAt',
+            sortBy: 'id',
             order: queryKey[2]
         }
     })
 
-    const pagesLength = 100/4;
+    const pagesLength = Math.ceil(fullData.length/queryKey[1]);
     return {comments: data, pagesLength}
 }
 
@@ -23,11 +27,16 @@ export const useGetComments = (page: number, perPage: number, sorting: 'asc'|'de
 
 
 const postComment = async (payload: any) => {
-    return await axios.post(API.POST.comments, payload)
+    return await axios.post(API.POST.comments, payload);
 }
 
 export const useCommentsMutation = () => {
     return useMutation(postComment, {
-        onSuccess: () => queryClient.refetchQueries('comments'),
+        onSuccess: (payload) => {
+            queryClient.setQueryData('comments', (data) => {
+                return { ...data!, name: payload.data.name, content: payload.data.content, createdAt: payload.data.createdAt }
+            })
+            return queryClient.invalidateQueries(['comments'])
+        },
     })
 }
