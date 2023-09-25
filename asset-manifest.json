@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SoftBlue/static/css/main.299bb07c.css",
-    "main.js": "/SoftBlue/static/js/main.6741c9c7.js",
+    "main.js": "/SoftBlue/static/js/main.c25cf74c.js",
     "static/media/model.png": "/SoftBlue/static/media/model.fac0aafd46e7983e776a.png",
     "index.html": "/SoftBlue/index.html",
     "main.299bb07c.css.map": "/SoftBlue/static/css/main.299bb07c.css.map",
-    "main.6741c9c7.js.map": "/SoftBlue/static/js/main.6741c9c7.js.map"
+    "main.c25cf74c.js.map": "/SoftBlue/static/js/main.c25cf74c.js.map"
   },
   "entrypoints": [
     "static/css/main.299bb07c.css",
-    "static/js/main.6741c9c7.js"
+    "static/js/main.c25cf74c.js"
   ]
 }
