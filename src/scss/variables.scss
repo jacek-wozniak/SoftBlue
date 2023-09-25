@@ -1,0 +1,34 @@
+/* stylelint-disable color-no-hex */
+
+// -------------------- SPACES ------------------------
+$space:                       16px;
+$container:                   1250px;
+$container-small:             540px;
+
+$screen-phone:            480px;
+$screen-tablet:           767px;
+$screen-desktop:          1279px;
+
+
+// -------------------- FONTS ------------------------
+// family
+$font-family-base:                'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font-family-2nd:                 'Noto Sans Thai', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+
+// -------------------- COLORS ------------------------
+
+// basic
+$black:                                 #000000;
+$white:                                 #fafafa;
+$gray:                                  #d7d7d7;
+
+$bg-brighter:                           #06101a;
+$bg-darker:                             #050e17;
+
+$link-hover:                            #C0C0C0;
+$accent-element-color:                  #00bcd5;
+$accent-element-hover-color:            #01b2c9;
+$accent-text-color:                     #00bcd5;
+
+$pagination-color:                      #041f2a;
+$pagination-hover-color:                #072836;

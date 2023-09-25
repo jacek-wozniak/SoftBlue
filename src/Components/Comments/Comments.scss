@@ -1,0 +1,51 @@
+@import '../../scss/mixins';
+
+.comments {
+  background-color: $bg-darker;
+  padding: $space*3;
+
+  &__topbar {
+    display: flex;
+  }
+
+  &__sorting-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__sorting-delimiter {
+    height: 50%;
+    width: 1px;
+    background-color: $white;
+    margin: 0 10px;
+  }
+
+  &__sorting-element {
+    @include font(12, 12);
+    cursor: pointer;
+
+    &:hover {
+      color: $link-hover;
+    }
+  }
+
+  &__title {
+    @include font(20, 24, 600);
+  }
+
+  &__container {
+    margin-top: $space*2;
+  }
+
+  &__placeholder {
+    height: 441px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__new-comment {
+
+  }
+}

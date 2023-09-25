@@ -1,0 +1,21 @@
+@import '../../scss/mixins';
+
+.section-header {
+  text-align: center;
+
+  &__title {
+    text-transform: uppercase;
+    @include font(22, 22, 700);
+  }
+
+  &__subtitle {
+    @include font(36, 36, 600);
+  }
+
+  &__header-text {
+    margin-top: $space*2;
+    @include font(14, 20);
+    max-width: 650px;
+    display: inline-block;
+  }
+}

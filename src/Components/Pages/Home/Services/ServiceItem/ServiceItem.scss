@@ -1,0 +1,48 @@
+@import '../../../../../scss/mixins';
+
+.service-item {
+  text-align: center;
+  max-width: 330px;
+
+  &__icon-circle {
+    background-color: $accent-element-color;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--1 {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='28' shape-rendering='geometricPrecision' image-rendering='optimizeQuality' fill-rule='evenodd' fill='%23fefffe'%3E%3Cpath d='M4.5-.5h32v4h-30v18h17v6h-24v-6h3a200.44 200.44 0 0 1 .5-20C3.717.956 4.217.289 4.5-.5zm35 7v21h-13c-1.126-6.586-1.293-13.253-.5-20 4.401-.967 8.901-1.3 13.5-1zm-10 4h6v11h-6v-11z' opacity='.821'/%3E%3C/svg%3E");
+    }
+
+    &--2 {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='31' shape-rendering='geometricPrecision' image-rendering='optimizeQuality' fill-rule='evenodd'%3E%3Cpath fill='%23fefffe' d='M4.5-.5h9c1.797 3.614 3.797 3.614 6 0h9c2.116 2.1 3.783 4.433 5 7v5c-4.583 7.253-10.25 13.586-17 19h-1c-6.038-5.037-11.371-10.703-16-17v-9c1.333-2 3-3.667 5-5zm2 4c1.699-.16 3.366.006 5 .5 1.277 1.786 2.944 2.952 5 3.5 2.628-3.146 5.962-4.313 10-3.5 3.449 3.782 3.282 7.616-.5 11.5a120.69 120.69 0 0 1-9.5 9c-5.358-3.192-9.525-7.525-12.5-13-.977-3.317-.144-5.984 2.5-8z' opacity='.775'/%3E%3C/svg%3E");
+    }
+
+    &--3 {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='38' shape-rendering='geometricPrecision' image-rendering='optimizeQuality' fill-rule='evenodd'%3E%3Cpath fill='%23fefffe' d='M11.5-.5h6c5.512 1.512 9.512 4.845 12 10v26c-1.209.432-2.209 1.099-3 2h-12v-4a60.94 60.94 0 0 0 11-.5c-1.973-.495-3.973-.662-6-.5v-14h6c.937-8.481-2.729-13.481-11-15-8.271 1.519-11.937 6.519-11 15h6v14c-3.585.348-6.918-.319-10-2v-21c2.488-5.155 6.488-8.488 12-10z' opacity='.868'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include font(22, 28, 700);
+    margin-top: $space*1.5;
+  }
+
+  &__desc {
+    margin-top: $space;
+    @include font(12, 20, 400, 0.16)
+  }
+}

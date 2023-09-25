@@ -1,0 +1,25 @@
+@import '../../../../scss/mixins';
+
+.qualifications {
+  background-color: $bg-brighter;
+  padding: $space*6 0 $space*8;
+
+  &__items {
+    grid-gap: $space*1.5;
+    margin-top: $space*2;
+    justify-content: center;
+
+    @include for-size(tablet-up) {
+      display: grid;
+      grid-template-columns: minmax(auto, 480px) minmax(auto, 480px);
+    }
+  }
+
+  &__placeholder {
+    height: 446px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/3;
+  }
+}

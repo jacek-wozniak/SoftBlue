@@ -1,0 +1,47 @@
+@import './variables';
+
+@mixin for-size($range) {
+  @if $range == phone-up {
+    @media (min-width: $screen-phone) { @content; }
+  } @else if $range == tablet-up {
+    @media (min-width: $screen-tablet) { @content; }
+  } @else if $range == desktop-up {
+    @media (min-width: $screen-desktop) { @content; }
+  } @else {
+    @media (min-width: $range) { @content; }
+  }
+}
+
+@mixin font($font-size: false, $line-height: false, $font-weight: false, $letter-spacing: false) {
+  @if $font-size {
+    font-size: $font-size/16 * 1rem;
+  }
+
+  @if $font-weight {
+    font-weight: $font-weight;
+  }
+
+  @if $line-height {
+    line-height: $line-height/$font-size * 1em;
+  }
+
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing/$font-size * 1em;
+  }
+}
+
+@mixin loader($options) {
+  animation: loader #{$options};
+
+  @keyframes loader {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em;
+    }
+
+    40% {
+      box-shadow: 0 2.5em 0 0;
+    }
+  }
+}

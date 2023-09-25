@@ -1,0 +1,26 @@
+@import '../../../scss/mixins';
+
+.pagination {
+  display: flex;
+  grid-gap: $space/2;
+  margin-top: $space;
+  align-items: center;
+
+  &__item {
+    padding: $space*0.75 $space;
+    background-color: $pagination-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $pagination-hover-color;
+    }
+
+    &--active {
+      background-color: $accent-element-color;
+
+      &:hover {
+        background-color: $accent-element-hover-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../../../scss/mixins';
+
+.services {
+  background-color: $bg-darker;
+  padding: $space*8 0 $space*4;
+
+  &__items {
+    display: flex;
+    grid-gap: $space*4;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $space*4;
+
+    @include for-size(tablet-up) {
+      justify-content: center;
+      flex-direction: row;
+      grid-gap: $space*2;
+    }
+  }
+
+  &__placeholder {
+    height: 262px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,12 @@
+@import 'src/scss/mixins.scss';
+
+.article {
+  @include for-size(tablet-up) {
+    column-count: 2;
+    column-fill: balance;
+  }
+
+  p {
+    padding: $space/2 0;
+  }
+}

@@ -1,0 +1,58 @@
+@import 'src/scss/mixins.scss';
+
+.hero-decoration {
+  position: absolute;
+  z-index: 0;
+  display: none;
+
+  &:not(&--hide-small-desktop) {
+    @include for-size(tablet-up) {
+      display: block;
+    }
+  }
+
+  &--hide-small-desktop {
+    @include for-size(1600px) {
+      display: block;
+    }
+  }
+}
+
+.hero-decoration1 {
+  left: 35%;
+  top: 60%;
+}
+
+.hero-decoration2 {
+  left: 32%;
+  top: 20%;
+}
+
+.hero-decoration3 {
+  right: 8px;
+  top: 8px;
+}
+
+.hero-decoration4 {
+  left: 8px;
+  bottom: 8px;
+}
+
+.hero-decoration5 {
+  right: 45%;
+  top: 40%;
+}
+
+.hero-decoration6 {
+  left: 5%;
+  top: 15%;
+}
+
+.hero-decoration7 {
+  left: 8%;
+  top: 55%;
+}
+.hero-decoration8 {
+  right: 6%;
+  top: 45%;
+}

@@ -1,0 +1,43 @@
+@import 'src/scss/mixins.scss';
+
+.hero {
+  background: $bg-brighter;
+  padding-bottom: $space*3;
+  position: relative;
+  z-index: 1;
+
+  @include for-size(tablet-up) {
+    background: url("./model.png") 80% bottom no-repeat $bg-brighter;
+    background-size: auto 80%;
+    height: 650px;
+    padding-top: $space*3;
+  }
+
+  &__introduce {
+    margin-top: 50px;
+    max-width: 550px;
+
+    @include for-size(tablet-up) {
+      margin-top: 150px;
+      max-width: 60%;
+    }
+  }
+
+  &__top-caption {
+    @include font(12, 10);
+  }
+
+  &__header {
+    margin-top: $space/2;
+    @include font(42, 52, 700)
+  }
+
+  &__services {
+    margin-top: $space*1.5;
+  }
+
+  &__services-item {
+    @include font(12, 14);
+    padding: 4px;
+  }
+}

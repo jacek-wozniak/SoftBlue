@@ -1,0 +1,35 @@
+@import 'src/scss/mixins.scss';
+
+.loader {
+  color: $white;
+  font-size: 14px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translatey(-100%);
+  animation-delay: -0.16s;
+
+  &,
+  &::before,
+  &::after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    @include loader('1.8s infinite both ease-in-out');
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+
+  &::before {
+    left: -3.5em;
+    animation-delay: -0.32s;
+  }
+
+  &::after {
+    left: 3.5em;
+  }
+}

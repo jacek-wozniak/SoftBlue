@@ -1,0 +1,12 @@
+@import '../../scss/mixins';
+
+.footer {
+  background-color: $accent-element-color;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: $space/2;
+  box-sizing: border-box;
+}
