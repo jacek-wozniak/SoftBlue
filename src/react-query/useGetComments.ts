@@ -32,8 +32,6 @@ const postComment = async (payload: any) => {
 
 export const useCommentsMutation = () => {
     return useMutation(postComment, {
-        onSuccess: () => {
-            return queryClient.invalidateQueries(['comments'])
-        },
+        onSuccess: () => queryClient.invalidateQueries(['comments']),
     })
 }
