@@ -32,10 +32,7 @@ const postComment = async (payload: any) => {
 
 export const useCommentsMutation = () => {
     return useMutation(postComment, {
-        onSuccess: (payload) => {
-            queryClient.setQueryData('comments', (data) => {
-                return { ...data!, name: payload.data.name, content: payload.data.content, createdAt: payload.data.createdAt }
-            })
+        onSuccess: () => {
             return queryClient.invalidateQueries(['comments'])
         },
     })

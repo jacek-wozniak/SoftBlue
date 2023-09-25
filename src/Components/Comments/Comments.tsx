@@ -22,7 +22,7 @@ const Comments = () => {
 
     return (
         <>
-            <section className="comments">
+            <section className="comments" id="comments">
                 <div className="container container--small">
                     <div className="comments__topbar">
                         <h2 className="comments__title">Comments</h2>

@@ -6,7 +6,8 @@ import {useState} from "react";
 const Menu = () => {
     const [mobileMenuActive, setMobileMenuActive] = useState(false);
     const handleCommentsClick = () => {
-        console.log('Scroll to comments');
+        const commentsSection = document.getElementById('comments')!;
+        commentsSection.scrollIntoView({behavior: 'smooth'});
     }
 
     const handleHamburgerClick = () => {
