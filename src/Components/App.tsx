@@ -10,7 +10,7 @@ import Footer from "./Footer/Footer";
 
 const App = () => {
     return (
-        <HashRouter>
+        <HashRouter basename="/SoftBlue">
             <Hero />
             <Routes>
                 <Route path="/" element={<HomePage />} />
